@@ -14,7 +14,7 @@ load_dotenv()
 
 # YandexGPT API endpoint (standard example)
 YANDEXGPT_ENDPOINT = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
-YANDEX_IAM_TOKEN = os.getenv('YANDEX_IAM_TOKEN')
+YANDEX_API_KEY = os.getenv('YANDEX_API_KEY')
 
 # Initialize Rich console
 console = Console()
@@ -70,8 +70,8 @@ class FreelancerAnalysisSystem:
 
             # Prepare YandexGPT request
             headers = {
-                f"Authorization: Bearer <{YANDEX_IAM_TOKEN}>",
-                "Content-Type: application/json"
+                "Authorization": f"Api-Key {YANDEX_API_KEY}",
+                "Content-Type": "application/json"
             }
             payload = {
                 "modelUri": "gpt://aje78mro50ila53rqvm5/yandexgpt",

@@ -18,9 +18,9 @@ This system analyzes statistical data about freelancer earnings and provides ans
 pip install -r requirements.txt
 ```
 
-2. Create a `.env` file in the project root and add your Yandex IAM token:
+2. Create a `.env` file in the project root and add your Yandex API key:
 ```
-YANDEX_IAM_TOKEN=your_yandex_iam_token_here
+YANDEX_API_KEY=your_yandex_api_key_here
 ```
 
 3. Set up Kaggle credentials:
